@@ -12,6 +12,7 @@ import javax.swing.table.DefaultTableModel;
 import Lab2_Bai4.model.User;
 import java.util.List;
 import java.util.prefs.Preferences;
+import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 public class UserManagement extends javax.swing.JFrame {
 
@@ -281,24 +282,14 @@ private void initTablie (){
     }//GEN-LAST:event_rdbAdminActionPerformed
 
     private void bntUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntUpdateActionPerformed
-        // TODO add your handling code here:
+    
+
     }//GEN-LAST:event_bntUpdateActionPerformed
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-             StringBuilder sb = new StringBuilder();
-            if (txtUsename.getText().equals("")){
-                sb.append("Chưa có tên đăng nhập\n");
-            }
-            if(sb.length()>0){
-                JOptionPane.showMessageDialog(this, sb.toString(),"Error",JOptionPane.ERROR_MESSAGE);
-                return ;
-            } 
-            User    user = new User();
-            user.setUsename(txtUsename.getText());
-            user.setPassword(new String(txtPassword.getPassword()));
-            user.setRole(rdbUser.isSelected()?"user":"admin");
-            list.add(user);
-            fillTable();
+           
+            
+        
     }//GEN-LAST:event_btnAddActionPerformed
 
     private void btnRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoveActionPerformed
